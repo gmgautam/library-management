@@ -8,12 +8,11 @@ export const fetchbooks = createAsyncThunk(
   async (_, thunkApi) => {
     try {
       const res = await api.get("/books");
-      console.log(res.data.reverse(), "sort data");
+      res.data.reverse();
       if (res.status === 200) {
         return res.data;
       }
     } catch (error) {
-      console.log(error?.message, "error in the api");
       throw thunkApi.rejectWithValue(error?.message);
     }
   }
@@ -25,7 +24,6 @@ export const addbook = createAsyncThunk(
   async (data, thunkApi) => {
     try {
       const res = await api.post("/books", data);
-      console.log(res, "response in thunk");
       if (res.status === 201) {
         return res.data;
       }
@@ -125,9 +123,6 @@ const bookSlice = createSlice({
         if (index !== -1) {
           state.bookData[index] = action.payload;
         }
-        // state.bookData = state.bookData.map((book) => {
-        //   return book.id === action.payload.id ? action.payload : book;
-        // });
         state.isLoading = false;
       })
       .addCase(editbook.rejected, (state, action) => {

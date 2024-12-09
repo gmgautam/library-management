@@ -5,7 +5,6 @@ const HomePage = () => {
   return (
     <>
       <Box className="grid grid-cols-1 md:grid-cols-2 h-[90vh] bg-gray-50">
-        {/* Left Section: Image */}
         <Box className="p-5 flex justify-center items-center">
           <img
             src={boyImg}
@@ -14,9 +13,7 @@ const HomePage = () => {
           />
         </Box>
 
-        {/* Right Section: Content */}
         <Box className="flex flex-col justify-center items-start px-10 space-y-6">
-          {/* Title */}
           <Typography
             sx={{
               fontWeight: "bold",
@@ -28,7 +25,6 @@ const HomePage = () => {
             Welcome to Your Library Management System
           </Typography>
 
-          {/* Description */}
           <Typography variant="body1" className="text-gray-600 text-lg">
             Manage your library with ease! This system allows you to maintain
             and organize a collection of books effortlessly. Whether you're
@@ -50,7 +46,6 @@ const HomePage = () => {
             </ul>
           </Typography>
 
-          {/* Buttons */}
           <Box className="  text-center">
             <NavLink to="/books">
               <button className="px-6 py-2 m-2 min-h-[50px] bg-black text-white  rounded-[3px] hover:bg-gray-400 hover:text-black transition duration-300">

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useDispatch } from "react-redux";
 import { toast } from "sonner";
-import { bookSchema } from "../../schema/schema";
+import { bookSchema } from "../../schema/bookSchema.js";
 import { addbook, editbook } from "../../slices/bookSlice.jsx";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import { useEffect } from "react";
