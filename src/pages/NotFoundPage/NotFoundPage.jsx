@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Typography, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import lostpage from "../../../public/images/404pic.png"
+import lostpage from "../../../public/images/404pic.png";
 const NotFoundPage = () => {
   const navigate = useNavigate();
 
@@ -17,10 +17,9 @@ const NotFoundPage = () => {
         padding: "20px",
       }}
     >
-      {/* Funny Image or Illustration */}
       <Box
         component="img"
-        src={lostpage} // Replace with a funny image or illustration
+        src={lostpage}
         alt="404 Not Found"
         sx={{
           maxWidth: "30%",
@@ -28,8 +27,6 @@ const NotFoundPage = () => {
           marginBottom: "20px",
         }}
       />
-
-      {/* Main Message */}
       <Typography
         variant="h3"
         sx={{
@@ -42,7 +39,6 @@ const NotFoundPage = () => {
         Oops! Lost in the Book Universe? 📚
       </Typography>
 
-      {/* Sub-message */}
       <Typography
         variant="body1"
         sx={{
@@ -57,7 +53,6 @@ const NotFoundPage = () => {
         we’ve all been there!
       </Typography>
 
-      {/* Funny Line */}
       <Typography
         variant="body1"
         sx={{

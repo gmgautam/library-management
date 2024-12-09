@@ -1,25 +1,21 @@
-import * as React from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import Paper from "@mui/material/Paper";
 import { useSelector, useDispatch } from "react-redux";
 import { Box, IconButton, Button, Typography } from "@mui/material";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { deletebooks, fetchbooks } from "../../slices/bookSlice";
-import FormAddBook from "../../components/forms/addBookForm";
+import { deletebooks } from "../../slices/bookSlice";
+import FormAddBook from "../../components/forms/FormAddBook";
 import { useState } from "react";
 import { toast } from "sonner";
-import { useNavigate } from "react-router-dom";
 
 const ManageBooks = () => {
-  const { bookData: data, isLoading } = useSelector((state) => state.books);
+  const { bookData: data } = useSelector((state) => state.books);
   const dispatch = useDispatch();
-  const naviagte = useNavigate();
   const [toggle, setToggle] = useState(true);
   const [updateValue, setUpdateValue] = useState(null);
   // handel edit book
   const handleEdit = (row) => {
-    console.log("Edit book:", row);
     setUpdateValue(row);
     setToggle(false);
   };

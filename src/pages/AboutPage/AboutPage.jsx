@@ -1,4 +1,4 @@
-import React from "react";
+/* eslint-disable react/no-unescaped-entities */
 import { Box, Typography, Button } from "@mui/material";
 import about from "../../../public/images/aboutRB.png";
 const AboutPage = () => {
